@@ -127,7 +127,7 @@ public class LoginActivity extends AppCompatActivity {
                     showLoading(false);
                     Toast.makeText(this, "Welcome to Medico! 🎉", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(this, MainActivity.class);
+                    Intent intent = new Intent(this, PatientDashboardActivity.class);
                     intent.putExtra("userType", isPatientSelected ? "PATIENT" : "DOCTOR");
                     startActivity(intent);
                     finish();

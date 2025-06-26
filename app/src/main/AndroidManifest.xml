@@ -5,6 +5,7 @@
     <!-- Permissions -->
     <uses-feature android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.permission.CALL_PHONE" />
+    <uses-feature android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +18,7 @@
         android:theme="@style/Theme.Medicoroot"
         tools:targetApi="31">
 
-        <!-- LoginActivity should be the launcher -->
+        <!-- Login Activity (Launcher) -->
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -27,12 +28,32 @@
             </intent-filter>
         </activity>
 
-        <!-- RegisterActivity -->
+        <!-- Register Activity -->
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
 
-        <!-- MainActivity (no longer the launcher) -->
+        <!-- Patient Dashboard -->
+        <activity
+            android:name=".PatientDashboardActivity"
+            android:exported="false" />
+
+        <!-- Book Appointment -->
+        <activity
+            android:name=".BookAppointmentActivity"
+            android:exported="false" />
+
+        <!-- Appointment Booking (Time Selection) -->
+        <activity
+            android:name=".AppointmentBookingActivity"
+            android:exported="false" />
+
+        <!-- Appointments List -->
+        <activity
+            android:name=".AppointmentsListActivity"
+            android:exported="false" />
+
+        <!-- Main Activity (Fallback) -->
         <activity
             android:name=".MainActivity"
             android:exported="false" />
